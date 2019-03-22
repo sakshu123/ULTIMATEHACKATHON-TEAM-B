@@ -29,7 +29,7 @@ namespace Hackathon
                 {
 
 
-                    Console.WriteLine( Names[i] + " = A");
+                    Console.WriteLine(Names[i] + " = A");
                 }
 
 
@@ -41,16 +41,42 @@ namespace Hackathon
 
                 else if (i == 2 || i == 5 || i == 9 || i == 13)
                 {
-                    Console.WriteLine( Names[i] + " = C");
+                    Console.WriteLine(Names[i] + " = C");
                 }
 
 
                 else if (i == 3 || i == 6 || i == 10 || i == 14)
                 {
-                    Console.WriteLine( Names[i] + " = D");
+                    Console.WriteLine(Names[i] + " = D");
                 }
 
             }
+            checkVowels();
+        }
+
+        public static int checkVowels()
+        {
+            int f = 0;
+            string[] vowel = new string[] { "a", "e", "i", "o", "u" };
+            Console.WriteLine("Enter a character");
+            String s = Console.ReadLine();
+            for (int i = 0; i < s.Length; i++)
+            {
+                if (vowel[i] == s.ToLower())
+                {
+                    Console.WriteLine("this character is in the list at" + " position " + (i + 1));
+                    f = i;
+                    
+                    
+                }
+                else
+                {
+                    Console.WriteLine("not there");
+                    f = -1;
+                    
+                }
+            }
+            return f;
         }
     }
 }
